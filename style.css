@@ -9,7 +9,14 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px; /* Fonte ampliada para facilitar a leitura */
     line-height: 1.6;
-    background-color: #F4F4F9;
+    /* Fundo com formas geométricas simples em 2D */
+    background-color: #f4f4f9;
+    background-image: 
+        radial-gradient(#d0d7de 15%, transparent 16%),
+        linear-gradient(45deg, rgba(0, 64, 133, 0.03) 25%, transparent 25%, transparent 75%, rgba(0, 64, 133, 0.03) 75%),
+        linear-gradient(-45deg, rgba(0, 64, 133, 0.03) 25%, transparent 25%, transparent 75%, rgba(0, 64, 133, 0.03) 75%);
+    background-size: 60px 60px, 120px 120px, 120px 120px;
+    background-position: 0 0, 0 0, 60px 60px;
     color: #111111; /* Alto contraste com o fundo */
     padding: 20px;
 }
@@ -40,22 +47,95 @@ main {
 }
 
 .card-dica {
+    display: block;
+    text-decoration: none;
     background-color: #FFFFFF;
     border: 3px solid #004085; /* Borda bem visível */
     border-radius: 12px;
     padding: 25px;
     margin-bottom: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.card-dica:hover, .card-dica:focus {
+    transform: translateY(-3px);
+    border-color: #002752;
+    outline: 4px solid #FFC107;
 }
 
 .card-dica h2 {
     color: #004085;
     font-size: 28px;
     margin-bottom: 15px;
+    text-decoration: underline;
 }
 
 .card-dica p {
     color: #222222;
+}
+
+.link-saiba-mais {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #004085;
+    font-size: 20px;
+}
+
+/* Estilos de Páginas Secundárias */
+.ilustracao-tema {
+    text-align: center;
+    margin: 25px 0;
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px dashed #004085;
+}
+
+.ilustracao-tema svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.conteudo-detalhado {
+    background-color: #FFFFFF;
+    border: 3px solid #004085;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.conteudo-detalhado h3 {
+    color: #004085;
+    font-size: 26px;
+    margin: 20px 0 10px 0;
+}
+
+.conteudo-detalhado ul, .conteudo-detalhado ol {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.conteudo-detalhado li {
+    margin-bottom: 10px;
+}
+
+.btn-voltar {
+    display: inline-block;
+    background-color: #004085;
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.btn-voltar:hover, .btn-voltar:focus {
+    background-color: #002752;
+    outline: 4px solid #FFC107;
 }
 
 /* Botão de Destaque */
